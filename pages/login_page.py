@@ -42,7 +42,10 @@ class LoginPage(BasePage):
     
     def get_status_section(self, locator):
         return self.get_text(locator)
-          
+
+    def get_visibility_section(self, locator):
+        return self.get_visibility(locator)
+
     def logout(self):
         self.click(BurgerLocators.PERSONAL_ACCAUNT_BUTTON)
         self.click(BurgerLocators.LOGOUT_BUTTON)

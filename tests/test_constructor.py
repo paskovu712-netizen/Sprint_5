@@ -19,5 +19,7 @@ class TestBurgerConstructor:
         page.click_button(buttons)
 
         message = page.get_status_section(buttons)
-        assert 'Булки' or 'Соусы' or 'Начинки' in message
+        visible = page.get_visibility_section(buttons)
+        
+        assert ('Булки' or 'Соусы' or 'Начинки' in message) and visible
    
