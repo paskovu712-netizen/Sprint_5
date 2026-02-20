@@ -6,7 +6,10 @@ from data_pak import *
 
 class TestBurgerLogin:
 
-    @pytest.mark.parametrize('buttons', [BurgerLocators.LOGIN_BUTTON_MAIN, BurgerLocators.PERSONAL_ACCAUNT_BUTTON])
+    @pytest.mark.parametrize('buttons', 
+                             [BurgerLocators.LOGIN_BUTTON_MAIN,
+                              BurgerLocators.PERSONAL_ACCAUNT_BUTTON
+                              ])
     def test_success_login_by_button_login(self, driver, buttons):
         page = LoginPage(driver)
         page.open_main_page()
@@ -20,7 +23,7 @@ class TestBurgerLogin:
         page = LoginPage(driver)
         page.open_main_page()
         page.click_button(BurgerLocators.LOGIN_BUTTON_MAIN)
-        page.click_button(BurgerLocators.REGISTRATION_BUTTON)
+        page.click_button(BurgerLocators.LOG_REGISTRATION_BUTTON)
         page.click_button(BurgerLocators.REGISTRATION_LOGIN_BUTTON)
         page.login(right_login, right_pass)
         

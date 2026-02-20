@@ -18,15 +18,15 @@ class LoginPage(BasePage):
         self.click(locator)
     
     def login(self, username, password):
-        self.type(BurgerLocators.USERNAME_INPUT, username)
-        self.type(BurgerLocators.PASSWORD_INPUT, password)
+        self.type(BurgerLocators.LOG_USERNAME_INPUT, username)
+        self.type(BurgerLocators.LOG_PASSWORD_INPUT, password)
         self.click(BurgerLocators.LOGIN_BUTTON)
 
     def register(self, name, username, password):
-        self.type(BurgerLocators.NAME_INPUT, name)
-        self.type(BurgerLocators.USERNAME_INPUT, username)
-        self.type(BurgerLocators.PASSWORD_INPUT, password)
-        self.click(BurgerLocators.REGISTRATION_BUTTON)
+        self.type(BurgerLocators.REG_NAME_INPUT, name)
+        self.type(BurgerLocators.REG_USERNAME_INPUT, username)
+        self.type(BurgerLocators.REG_PASSWORD_INPUT, password)
+        self.click(BurgerLocators.REG_REGISTRATION_BUTTON)
 
     def get_status_login(self):
         return self.get_text(BurgerLocators.MAKE_ORDER_BUTTON)
