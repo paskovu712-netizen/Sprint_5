@@ -47,23 +47,18 @@ class BurgerLocators:
 #  Локаторы переходов
 #     
 # Найди выбор меню "Профиль"
-    #PROFILE_MENU_TEXT = (By.XPATH, ".//div/main/div/nav/ul/li[1]/a")
     PROFILE_MENU_TEXT = (By.XPATH, ".//a[text()='Профиль']")
 # Найди кнопку "Конструктор"
     CONSTRUCTOR_BUTTON = (By.XPATH, ".//p[text()='Конструктор']")
 # Найди кнопку "Stellar-Burger"
-    #STELLAR_LOGO_BUTTON = (By.XPATH, ".//div/header/nav/div/a")
     STELLAR_LOGO_BUTTON = (By.XPATH, ".//div/header/nav/div/a")
 
 # Локаторы конструктора
 
 # кнопка и текст раздела "Булки"
-    #SECTION_TEXT_BREAD = (By.XPATH, ".//div/main/section[1]/div[2]/h2[1]")
     SECTION_TEXT_BREAD = (By.XPATH, ".//div[2]/h2[1]") 
 # кнопка и текст раздела "Соусы"
-    #SECTION_TEXT_SAUCE = (By.XPATH, ".//div/main/section[1]/div[2]/h2[2]")
     SECTION_TEXT_SAUCE = (By.XPATH, ".//div[2]/h2[2]")
 # кнопка и текст раздела "Начинки"
-    #SECTION_TEXT_TOPPING = (By.XPATH, ".//div/main/section[1]/div[2]/h2[3]")
     SECTION_TEXT_TOPPING = (By.XPATH, ".//div[2]/h2[3]")
     
