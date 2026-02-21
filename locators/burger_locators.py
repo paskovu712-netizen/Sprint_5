@@ -9,11 +9,11 @@ class BurgerLocators:
 # Найди кнопку "Зарегистрироваться"
     REG_REGISTRATION_BUTTON = (By.XPATH, ".//button[text()='Зарегистрироваться']")
 # Найди поле "Имя"
-    REG_NAME_INPUT = (By.XPATH, ".//form/fieldset[1]/div/div/input")
+    REG_NAME_INPUT = (By.CSS_SELECTOR, "input[name='name'].text.input__textfield.text_type_main-default")
 # Найди поле "Email"    
-    REG_USERNAME_INPUT = (By.XPATH, ".//form/fieldset[2]/div/div/input")
+    REG_USERNAME_INPUT = (By.CSS_SELECTOR, "form.Auth_form__3qKeq fieldset:nth-child(2) div div input")
 # Найди поле "Пароль"    
-    REG_PASSWORD_INPUT = (By.XPATH, ".//form/fieldset[3]/div/div/input")
+    REG_PASSWORD_INPUT = (By.CSS_SELECTOR, "input[name='Пароль'].text.input__textfield.text_type_main-default")
 # Найди кнопку "Войти"    
     LOGIN_BUTTON = (By.XPATH, ".//button[text()='Войти']")
 # ошибка "Некорректный пароль"
@@ -21,9 +21,9 @@ class BurgerLocators:
 
 #  Локаторы Login
 # Найди поле "Email"
-    LOG_USERNAME_INPUT = (By.XPATH, ".//form/fieldset[1]/div/div/input")
+    LOG_USERNAME_INPUT = (By.CSS_SELECTOR, "input[name='name'].text.input__textfield.text_type_main-default")
 # Найди поле "Пароль"    
-    LOG_PASSWORD_INPUT = (By.XPATH, ".//form/fieldset[2]/div/div/input")
+    LOG_PASSWORD_INPUT = (By.CSS_SELECTOR, "input[name='Пароль'].text.input__textfield.text_type_main-default")
 # Найди кнопку "Зарегистрироваться"
     LOG_REGISTRATION_BUTTON = (By.XPATH, ".//a[text()='Зарегистрироваться']")
 # Найди кнопку "Личный Кабинет"
