@@ -6,13 +6,13 @@ from data_pak import *
 
 class TestBurgerConstructor:
 
-    @pytest.mark.parametrize('buttons',
+    @pytest.mark.parametrize('buttons,respond',
      [
-         BurgerLocators.SECTION_TEXT_BREAD, 
-         BurgerLocators.SECTION_TEXT_SAUCE, 
-         BurgerLocators.SECTION_TEXT_TOPPING
+         [BurgerLocators.SECTION_TEXT_BREAD, 'Булки'],
+         [BurgerLocators.SECTION_TEXT_SAUCE, 'Соусы'],
+         [BurgerLocators.SECTION_TEXT_TOPPING, 'Начинки']
          ])
-    def test_success_move_to_section(self, driver, buttons):
+    def test_success_move_to_section(self, driver, buttons, respond):
         page = LoginPage(driver)
         page.open_login_page()
         page.login(right_login, right_pass)
@@ -21,5 +21,5 @@ class TestBurgerConstructor:
         message = page.get_status_section(buttons)
         visible = page.get_visibility_section(buttons)
         
-        assert ('Булки' or 'Соусы' or 'Начинки' in message) and visible
+        assert respond in message and visible
    
